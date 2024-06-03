@@ -1,0 +1,21 @@
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$text-color: #333;
+$background-color: #f4f4f4;
+$header-footer-bg: #2c3e50;
+$link-color: $primary-color;
+$link-hover-color: darken($primary-color, 10%);
+$button-bg: $primary-color;
+$button-hover-bg: darken($primary-color, 10%);
+$border-radius: 5px;
+
+$clock-size: 100%;
+$border-width: 5px;
+$center-size: 20px;
+$hand-widths: (hour: 6px, minute: 4px, second: 2px);
+$hand-colors: (hour: #6f86ff, minute: #48ff15, second: red);
+$animation-durations: (hour: 360s, minute: 60s, second: 6s);
+
+@mixin transition($property, $duration, $timing) {
+  transition: $property $duration $timing;
+}

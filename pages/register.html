@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - WebPogoda</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img src="../media/img/logo.png" alt="site logo">
+        <h1>webPogoda</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="notifications.html">Notifications</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="login.html">Login</a> / <a href="register.html" class="current_tab">Register</a></li>
+        </ul>
+        <input type="text" class="search_place">
+    </nav>
+</header>
+<main>
+    <section class="form_section">
+        <h2>Register for webPogoda</h2>
+        <form action="register.php" method="post">
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div>
+                <label for="confirm_password">Confirm Password:</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+            </div>
+            <div class="">
+                <label for="date">Дата і час:</label><br>
+                <input type="datetime-local" id="date" name="date" required><br><br>
+            </div>
+            <style>
+                div{
+                    input:valid {
+                        background-color: rgba(200,255,200, 0.1);
+                    }
+
+                    input:invalid {
+                        background-color: rgba(255,200,200, 0.1);
+                    }
+                }
+            </style>
+            <div class="">
+                <label for="phone">Телефон:</label><br>
+
+                <input type="tel" id="phone" name="phone" pattern="+380([0-9]{2})-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                       placeholder="Формат: +380(12)-345-67-89" required><br><br>
+            </div>
+            <div class="">
+                <label for="website">Веб-сайт:</label><br>
+                <input type="url" id="website" name="website" placeholder="http://example.com" required><br><br>
+            </div>
+            <div>
+                <button type="submit">Register</button>
+            </div>
+            <p>Already have an account? <a href="login.html">Login here</a>.</p>
+        </form>
+
+    </section>
+    <div class="fixed_elem">
+        <div class="clock">
+            <div class="hand hour-hand"></div>
+            <div class="hand minute-hand"></div>
+            <div class="hand second-hand"></div>
+            <div class="center"></div>
+        </div>
+    </div>
+    <div class="indicator">
+        <div class="progress-container">
+            <div class="progress-bar" style="width: 10%;"></div>
+        </div>
+    </div>
+
+</main>
+<footer>
+    <p>&copy; 2024 webPogoda. All rights are secured.</p>
+    <aside>
+        <h4>Socials for feedback:</h4>
+        <p>+380966953384</p>
+        <p>Telegram, Viber</p>
+        <p>rostyslav.tarasov@nure.ua</p>
+    </aside>
+</footer>
+<script src="../script.js"></script>
+</body>
+</html>
